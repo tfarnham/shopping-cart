@@ -174,7 +174,7 @@ const Products = (props) => {
   // TODO: implement the restockProducts function
   const restockProducts = (url) => {
     
-    alert(url);
+    //alert(url);
     console.log("Restocking");
     
     doFetch(url);
