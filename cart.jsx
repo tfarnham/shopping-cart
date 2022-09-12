@@ -118,6 +118,14 @@ const Products = (props) => {
   };
   const deleteCartItem = (index) => {
     let newCart = cart.filter((item, i) => index != i);
+    let deletedItem = cart.filter((item,indexB) => index == indexB);
+    let updatedItems = items.map((item, index) => {
+      if (item.name == deletedItem[0].name) {
+        item.instock++;
+      }
+      return item;
+    })
+    setItems(updatedItems);
     setCart(newCart);
   };
   const photos = ["apple.png", "orange.png", "beans.png", "cabbage.png"];
